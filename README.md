@@ -29,39 +29,61 @@ Scribing 2/04/2025 Isaac Wedaman
 
 *R+ = RR+ --> "one or more"
 *0*10* = {w | w contains a single one} 
-(photo 3)
+![image](https://github.com/user-attachments/assets/011d5d46-236d-4339-90e8-ca71f55ffe68)
+
+
 
 Sigma in a regex means any single number in sigma
 Sigma* = 0 or more of any a [epsilon] [sigma]
 
-*photo
+![image](https://github.com/user-attachments/assets/2cadd85d-ef96-4fb9-ab93-3999b1630453)
+
 Regular Expression Sigma*1Sigma* 
 
 Case 1:photo
-case 2 & 3: photo
+![image](https://github.com/user-attachments/assets/1b574bab-63cf-497a-8dea-c2b95cf25d56)
 
+case 2 & 3: photo
+![image](https://github.com/user-attachments/assets/d8f25702-5b49-44d1-b660-a152149379b1)
 case 4,5,6
+![image](https://github.com/user-attachments/assets/92a8979f-ee8a-40a0-ad40-5e1a30f69fd7)
+
 
 
 
 A concat B: we have two machines, and epsilon tranisiton from the accepting state of a to the start point of b. we are going to do something similar to the set assemblies
+![image](https://github.com/user-attachments/assets/2494a194-25e3-4688-b464-d804b1c16546)
+
 
 
 AB: 
+![image](https://github.com/user-attachments/assets/3f17487e-09f1-41bb-a221-f3f20766580b)
+
 
 AB U A
+![image](https://github.com/user-attachments/assets/af2ef684-b08b-40d2-9d95-db630b7f9abd)
+
 
 (AB U a)*
+![image](https://github.com/user-attachments/assets/2c887966-87dc-49cb-b18f-25478262c9d9)
+
+![image](https://github.com/user-attachments/assets/814fc1bc-c7c5-4d27-898c-88446fe1e499)
+
 
 *equivalency betwen regular expressions & finitie automata: RegEx --> NFA --> (--> DFA)
 claim: regexs and finite automata are equal: proof
+![image](https://github.com/user-attachments/assets/31a660f6-6f67-443f-bffa-cf5a3404b0aa)
+
 
 DFA: definite finite automata
 NFA: non finite automata
 New GNFA --> "generalized" NFA, labels are an expression
 Goal: given an arbitrary NFA, recover an equivalent regular expression 
 *Rough outline: step one: construct a GNFA (what!). Step 2:recursively eliminate states, and as we do so we should alter the labels on transitions so that we preserve the language, and step 3: when only start and end states remain, the transmission label between them is the recovered regular expression 
-proof:
+proof:![image](https://github.com/user-attachments/assets/10c415aa-d537-4419-bb51-b111ef834d23)
 
 step one: produce a GNFA
 step two: "rip through a state" --> [explanation] rip Q1 --> take into account the flow from q1 to q2, start state to q1, q1 a to q2, and q1b to q3: we need a state (using our new labels) tale out ("rip") q1, and so start a to Q2 and start b to Q3 is the new model.
+![image](https://github.com/user-attachments/assets/19a3e9b0-e70a-4e19-9706-ee27491cd74f)
+
+

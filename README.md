@@ -86,4 +86,14 @@ step one: produce a GNFA
 step two: "rip through a state" --> [explanation] rip Q1 --> take into account the flow from q1 to q2, start state to q1, q1 a to q2, and q1b to q3: we need a state (using our new labels) tale out ("rip") q1, and so start a to Q2 and start b to Q3 is the new model.
 ![image](https://github.com/user-attachments/assets/19a3e9b0-e70a-4e19-9706-ee27491cd74f)
 
+SCRIBING 02/06/2025
+
+A regular expression can be equated to a regular expression
+*Regex --> NFA --> DFA
+*another method we'll learn about is "state elimination ", where we slowly get rid of states until we only have the start state, the path to the end state, and the final accepting state.
+
+eventually, you end up with a regex with the sequence that satisfies the start to end state. 
+here is an example of state elimination figured out by Atticus: ![image](https://github.com/user-attachments/assets/2469317b-2229-43bb-96a4-821686b58998)
+1) we start with a finite automaton with three states. it takes an epsilon to get from the start state, so we keep that in mind and get rid of q1, while conferring the now defunct q1 states to the start state. from here, we need to remove another state while retaining the old flow state; each successive iteration of the finite automaton must be equal to the last, less ripped version
+2) next, we intend to rip q2. to do this, we take stock of what it is connected to, remove it, and form a new finite automaton. for removing q1, we got that we needed epsilon then a to satisfy the machine, so we add that [we can disregard the epsilon] b must be nextm but we also add a star because once in q3, the sigma means that any b after will let the finite automaton remain in the accept state, so we add a b*, to denote that any successive bs would also work. 
 
